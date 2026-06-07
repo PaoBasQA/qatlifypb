@@ -1,10 +1,10 @@
-# 🌐 SystemProgAr Landing Page
+# 🌐 qatlifypb Landing Page
 
-Landing page oficial de **SystemProgAr**:  
+Landing page oficial de **qatlifypb**:  
 *"Tu web, tu centro digital. Conectamos tu marca."*
 
 ## 📝 Descripción
-En **SystemProgAr** creemos que cada proyecto tiene una historia que merece ser contada.  
+En **qatlifypb** creemos que cada proyecto tiene una historia que merece ser contada.  
 Diseñamos y desarrollamos páginas web que muestran la esencia de pequeños productores, bodegas, alojamientos y comercios locales, combinando estética, funcionalidad y herramientas de venta online.
 
 > Nuestra misión es ayudar a nuestros clientes a destacar en el mercado online y atraer a más clientes a través de una presencia digital efectiva.
@@ -12,7 +12,11 @@ Diseñamos y desarrollamos páginas web que muestran la esencia de pequeños pro
 ---
 
 ## 🚀 Demo en línea
+<<<<<<< HEAD:readme.md
 👉 [Ver sitio en Netlify](https://systemprogar.netlify.app/)
+=======
+👉 [Ver sitio en Netlify](https://github.com/PaoBasQA/qatlifypb.git)
+>>>>>>> 38c5dc9 (mover repo):README.md
 
 ---
 
@@ -30,9 +34,9 @@ Inspirado en la diversidad de Argentina:
 ---
 
 ## 📬 Contacto
-✉️ **Email**: systemprogar@gmail.com  
+✉️ **Email**:  
 🔗 **Redes sociales**:  
-[Facebook](https://www.facebook.com/profile.php?id=61588097072426) | [Instagram](https://www.instagram.com/systemprogar/)
+[Facebook](https://www.facebook.com/) | [Instagram](https://www.instagram.com/)
 
 ---
 
@@ -42,8 +46,3 @@ Inspirado en la diversidad de Argentina:
 - **Netlify** (hosting & deploy)
 
 ---
-
-## 📌 Cómo usar este proyecto
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/PaoBasQA/systemprogar-landing.git
