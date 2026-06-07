@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - SystemProgAr</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Menú de navegación fijo -->
+  <nav class="nav-fixed">
+    <div class="nav-container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="nav-logo">
+          <img src="assets/1_Logo_S.jpg" alt="SystemProgAr Logo" class="nav-logo-img">
+          <span class="nav-logo-text">SystemProgAr</span>
+        </div>
+        
+        <!-- Menú desktop -->
+        <div class="nav-menu-desktop">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="index.html#nosotros" class="nav-link">Nosotros</a>
+          <a href="index.html#servicios" class="nav-link">Servicios</a>
+          <a href="index.html#mision-vision" class="nav-link">Misión y Visión</a>
+          <a href="contacto.html" class="nav-link active">Contacto</a>
+        </div>
+        
+        <!-- Botón menú móvil -->
+        <button id="menu-btn" class="nav-mobile-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="nav-mobile-menu hidden">
+        <div class="nav-mobile-links">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="index.html#nosotros" class="nav-link">Nosotros</a>
+          <a href="index.html#servicios" class="nav-link">Servicios</a>
+          <a href="index.html#mision-vision" class="nav-link">Misión y Visión</a>
+          <a href="contacto.html" class="nav-link active">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Título -->
+  <section class="contact-hero">
+    <h1 class="contact-hero-title">Formulario de Contacto</h1>
+    <p class="contact-hero-subtitle">Escribinos y hablemos sobre tu proyecto</p>
+    <a href="index.html" class="btn-back">Volver al Inicio</a>
+  </section>
+
+  <!-- Formulario -->
+  <section class="form-section">
+    <div class="form-container">
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/mldlqwna" method="POST">
+            
+        <div class="form-group">
+          <label class="form-label">Nombre</label>
+          <input type="text" name="name" placeholder="Tu nombre" class="form-input" required pattern=".*\S+.*" title="El nombre no puede estar vacío o contener solo espacios">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" placeholder="tuemail@ejemplo.com" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea name="message" rows="5" placeholder="Escribí tu mensaje aquí..." class="form-textarea" required pattern="[^\s].*" title="El mensaje no puede comenzar con espacios en blanco"></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit-btn">
+          ¡Conversemos!
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer con Redes -->
+  <footer class="footer">
+    <p>&copy; 2025 SystemProgAr</p>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/profile.php?id=61588097072426" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook - SystemProgAr"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/systemprogar/" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram - SystemProgAr"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <!-- Popup -->
+  <div id="popup" class="popup-overlay hidden">
+    <div class="popup-content">
+      <h2 class="popup-title">¡Gracias!</h2>
+      <p class="popup-message">Tu mensaje fue enviado correctamente. Nos pondremos en contacto pronto.</p>
+      <button id="closePopup" class="popup-btn">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    // Asegurar que el popup esté oculto cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('popup');
+      popup.classList.add('hidden');
+      popup.style.display = 'none';
+
+      // Configurar validaciones personalizadas
+      const nameInput = document.querySelector('input[name="name"]');
+      const messageTextarea = document.querySelector('textarea[name="message"]');
+
+      // Validación para el nombre
+      nameInput.addEventListener('input', function() {
+        if (this.value.trim() === '') {
+          this.setCustomValidity('El nombre no puede estar vacío o contener solo espacios');
+        } else {
+          this.setCustomValidity('');
+        }
+      });
+
+      // Validación para el mensaje
+      messageTextarea.addEventListener('input', function() {
+        if (this.value.length > 0 && this.value.charAt(0) === ' ') {
+          this.setCustomValidity('El mensaje no puede comenzar con espacios en blanco');
+        } else if (this.value.trim() === '') {
+          this.setCustomValidity('El mensaje no puede estar vacío o contener solo espacios');
+        } else {
+          this.setCustomValidity('');
+        }
+      });
+    });
+
+    // === MENÚ DE NAVEGACIÓN ===
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
+    });
+
+    // Cerrar menú móvil al hacer click en un enlace
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-times');
+      });
+    });
+
+    // === FORMULARIO ===
+    const form = document.getElementById('contactForm');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closePopup');
+
+    // Listener para cerrar popup manualmente
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      popup.classList.add('hidden');
+      popup.style.display = 'none';
+    });
+
+    // Cerrar popup al hacer clic fuera del contenido
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.classList.add('hidden');
+        popup.style.display = 'none';
+      }
+    });
+
+    // Envío del formulario con validación
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Validar antes de enviar
+      const nombre = form.elements['name'].value;
+      const mensaje = form.elements['message'].value;
+
+      // Validación del nombre
+      if (nombre.trim() === '') {
+        form.elements['name'].setCustomValidity('El nombre no puede estar vacío o contener solo espacios');
+        form.elements['name'].reportValidity();
+        return;
+      } else {
+        form.elements['name'].setCustomValidity('');
+      }
+
+      // Validación del mensaje
+      if (mensaje.length > 0 && mensaje.charAt(0) === ' ') {
+        form.elements['message'].setCustomValidity('El mensaje no puede comenzar con espacios en blanco');
+        form.elements['message'].reportValidity();
+        return;
+      } else if (mensaje.trim() === '') {
+        form.elements['message'].setCustomValidity('El mensaje no puede estar vacío o contener solo espacios');
+        form.elements['message'].reportValidity();
+        return;
+      } else {
+        form.elements['message'].setCustomValidity('');
+      }
+
+      // Si llegamos aquí, todo está válido
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          popup.classList.remove('hidden');
+          popup.style.display = 'flex';
+          form.reset();
+
+          // cerrar automáticamente después de 4 segundos
+          setTimeout(() => {
+            popup.classList.add('hidden');
+            popup.style.display = 'none';
+          }, 4000);
+        } else {
+          alert('Hubo un error al enviar el mensaje. Intentá nuevamente.');
+        }
+      }).catch(error => {
+        alert('Hubo un error al enviar el mensaje. Intentá nuevamente.');
+      });
+    });
+  </script>
+
+</body>
+</html>

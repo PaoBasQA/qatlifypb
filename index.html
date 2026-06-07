@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SystemProgAr - Tu web, tu centro digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Menú de navegación fijo -->
+  <nav class="nav-fixed">
+    <div class="nav-container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="nav-logo">
+          <img src="assets/1_Logo_S.jpg" alt="SystemProgAr Logo" class="nav-logo-img">
+          <span class="nav-logo-text">SystemProgAr</span>
+        </div>
+        
+        <!-- Menú desktop -->
+        <div class="nav-menu-desktop">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#mision-vision" class="nav-link">Misión y Visión</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+        
+        <!-- Botón menú móvil -->
+        <button id="menu-btn" class="nav-mobile-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="nav-mobile-menu hidden">
+        <div class="nav-mobile-links">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#mision-vision" class="nav-link">Misión y Visión</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <!-- Contenedor para Lottie (carga desde CDN) -->
+    <div id="hero-lottie" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">SystemProgAr</h1>
+      <p class="hero-subtitle">Tu web, tu centro digital. Conectamos tu marca.</p>
+      <a href="contacto.html" class="btn-cta">Contáctanos</a>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section id="nosotros" class="section section-offset">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text-container">
+          <h2 class="about-section-title">Sobre nosotros</h2>
+          <p class="about-text">
+            En <strong>SystemProgAr</strong> creemos que cada proyecto tiene una historia que merece ser contada. Por eso diseñamos y desarrollamos páginas web que muestran la esencia de pequeños productores, bodegas, alojamientos y comercios locales, combinando estética, funcionalidad y herramientas de venta online. Queremos que tu negocio, ya sea de turismo, gastronomía o productos artesanales, sea visto y recordado.
+          </p>
+          <p class="mission-text">
+            "Nuestra misión es ayudar a nuestros clientes a destacar en el mercado online y atraer a más clientes a través de una presencia digital efectiva."
+          </p>
+        </div>
+        <div class="about-image-container">
+          <img src="assets/Yaguareté_y_slogan.jpg" alt="SystemProgAr - Tu web, tu motor digital" class="about-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="section section-offset services-section">
+    <div class="container">
+      <h2 class="section-title">Nuestros servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-laptop-code service-icon blue"></i>
+          <h3 class="service-title">Desarrollo Web</h3>
+          <p class="service-text">Diseño y desarrollo de sitios web con foco en la calidad. Tu ventaja: atención al detalle gracias a nuestra experiencia en testing.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-brands fa-facebook service-icon facebook"></i>
+          <h3 class="service-title">Conexión con redes</h3>
+          <p class="service-text">Integramos tu web con Facebook, Instagram y más, para que tu marca gane visibilidad en el mundo digital.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-headset service-icon green"></i>
+          <h3 class="service-title">Soporte y mantenimiento</h3>
+          <p class="service-text">Estamos en constante diálogo con nuestros clientes para garantizar mejoras continuas y nuevas experiencias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión y Visión -->
+  <section id="mision-vision" class="section section-offset mission-vision-section">
+    <div class="container">
+      <div class="mission-vision-content">
+        <div class="mission-vision-image-container">
+          <img src="assets/Yaguareté_vigilando.jpg" alt="SystemProgAr - Misión y Visión" class="mission-vision-image">
+        </div>
+        <div class="mission-vision-text-container">
+          <div class="mission-block">
+            <h3 class="mission-vision-title">Misión</h3>
+            <p class="mission-vision-text">
+              Es empoderar a las empresas para que construyan una presencia digital impactante y funcional. Diseñamos y desarrollamos soluciones web y APIs de alta calidad, que están minuciosamente probadas por nuestro equipo de <strong>QA (Quality Assurance)</strong> para garantizar un rendimiento óptimo y una experiencia de usuario impecable. Conectamos estas soluciones de manera estratégica con las redes sociales, asegurando que cada proyecto no solo sea robusto, sino también efectivo en la captación y conversión de audiencias.
+            </p>
+          </div>
+          <div class="vision-block">
+            <h3 class="mission-vision-title">Visión</h3>
+            <p class="mission-vision-text">
+              Ser el socio tecnológico líder y de confianza para empresas de todos los tamaños, reconocido por la excelencia en el desarrollo de productos digitales y un compromiso inquebrantable con la calidad. Buscamos innovar constantemente, aprovechando las tecnologías emergentes para crear experiencias digitales que no solo cumplan con las expectativas de nuestros clientes, sino que las superen, impulsando su crecimiento y éxito en el ecosistema digital. Aspiramos a ser un referente en la integración perfecta de la tecnología web y las redes sociales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frases destacadas -->
+  <section class="ideas-section">
+    <div class="container">
+      <h2 class="ideas-title">Nuestras ideas</h2>
+      <p class="ideas-quote">"De tu tierra al mundo: web para productores y emprendedores."</p>
+      <p class="ideas-quote">"Nuestra startup nació para fomentar el comercio regional y el turismo nacional."</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto-info" class="section contact-reduced-padding">
+    <div class="container contact-section">
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="contact-email">Email: <a href="mailto:systemprogar@gmail.com" class="email-link">systemprogar@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61588097072426" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook - SystemProgAr"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/systemprogar/" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram - SystemProgAr"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 SystemProgAr. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Toggle menú móvil
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('fa-bars');
+      menuIcon.classList.toggle('fa-times');
+    });
+
+    // Cerrar menú móvil al hacer click en un enlace
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.classList.remove('fa-times');
+      });
+    });
+
+    // Highlight del menú activo al hacer scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Inicializar Lottie en el hero (carga CDN si hace falta)
+      (function(){
+        const containerId = 'hero-lottie';
+        const path = 'assets/hero-animation.json';
+        function initLottie(){
+          const c = document.getElementById(containerId);
+          if (!c) return;
+          if (window.innerWidth < 600) return; // evitar en móviles pequeños
+          if (typeof lottie === 'undefined') return;
+          lottie.loadAnimation({
+            container: c,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path
+          });
+          c.style.transition = 'transform 0.15s linear';
+          const onMove = (e) => {
+            const rect = c.getBoundingClientRect();
+            const cx = rect.left + rect.width/2;
+            const cy = rect.top + rect.height/2;
+            const clientX = ('touches' in e && e.touches.length) ? e.touches[0].clientX : e.clientX;
+            const clientY = ('touches' in e && e.touches.length) ? e.touches[0].clientY : e.clientY;
+            const x = (clientX - cx) * 0.02;
+            const y = (clientY - cy) * 0.01;
+            c.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+          };
+          window.addEventListener('mousemove', onMove);
+          window.addEventListener('touchmove', onMove, { passive: true });
+        }
+
+        if (typeof lottie === 'undefined'){
+          const s = document.createElement('script');
+          s.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js';
+          s.onload = initLottie;
+          document.body.appendChild(s);
+        } else initLottie();
+      })();
+    </script>
+</body>
+</html>
